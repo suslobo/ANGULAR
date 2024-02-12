@@ -1,0 +1,30 @@
+<h2>Pantalla de detalle de un producto</h2>
+
+<button (click)="loadProduct()">Ver producto</button>
+<!-- Este es el ngIf clásico
+<div *ngIf="product"> 
+    <p><strong>Título:</strong> {{product.title}}</p>
+    <p><strong>Precio:</strong> {{product.price}} </p>
+</div>
+<div *ngIf="!product">
+    <p style="color: rgb(255, 0, 0);">No existe el producto</p>
+</div>
+-->
+
+<!--formas de hacer el if, if else, else -->
+@if (product) {
+    <!--esxite este producto y verifica  -->
+<div>
+    Existe producto {{product.title}} con precio {{product.price}} €
+</div>
+    @if (product.price < 50) {
+        <div style="color: greenyellow;">El producto es barato</div>
+    } @else if (product.price < 100) {
+        <div style="color: blue;">El producto es regulinchi</div>
+    } @else {
+        <div style="color: red;">El producto es caro</div>
+    }
+
+} @else {
+    <p>No existe el producto.</p>
+}

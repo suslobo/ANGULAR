@@ -1,0 +1,15 @@
+<!-- si customer existe i-active si no is-not-active 
+en el div le ponemos el ngClass--> 
+@if (customer) {
+    <div [ngClass]="customer.active ? 'is-active' : 'is-not-active'">
+        <p><strong>ID:</strong> {{customer.id}}</p>
+        <p><strong>First name:</strong> {{customer.firstName}}</p>
+        <p><strong>email:</strong> {{customer.email}}</p>
+        <p><strong>NIF:</strong> {{customer.nif}}</p>
+        <p><strong>Birthday:</strong> {{customer.birthday}}</p>
+        <p><strong>Active:</strong> {{customer.active}}</p>
+    </div>
+<!-- si no, no se ha econtrado el cliente-->
+} @else {
+    <p>No se ha encontrado el cliente.</p>
+}
