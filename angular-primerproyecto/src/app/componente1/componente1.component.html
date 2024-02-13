@@ -1,0 +1,13 @@
+<p>hola desde el html de componente1</p>
+<p>{{nombres}}</p>
+<ul>
+    <li *ngFor="let nombre of nombres">
+      {{nombre}}
+    </li>
+  </ul>
+  
+  <ul>
+    <li *ngFor="let nombre of nombres; let i = index">
+       {{nombre}} {{i}}
+    </li>
+  </ul>
