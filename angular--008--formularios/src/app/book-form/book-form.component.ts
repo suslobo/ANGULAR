@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Book } from '../interfaces/book.model';
 
 @Component({
   selector: 'app-book-form',
@@ -15,8 +16,9 @@ export class BookFormComponent {
     numPages: new FormControl(150), // por defecto tiene 150 paginas
     price: new FormControl(),
     available: new FormControl(true),
+    // publishDate: new FormControl('2023-11-15T10:30')
+    // publishDate: new FormControl(new Date().toISOString().slice(0, 16)),
     publishDate: new FormControl(),
-    // publisDate: new FormControl(new Date().toISOString().slice(0,16)) para que el usuario ponga la fecha
     category: new FormControl(),
     author: new FormControl(),
     // selección múltiple
@@ -49,6 +51,24 @@ export class BookFormComponent {
 
     const topics = this.bookForm.get('topics')?.value;
     console.log(topics);
+
+    // una vez ya se tienen todas las variables con todos los datos del formulario
+    // se puede crear un objeto de tipo Book y enviarlo a backend usando httpClient o un servicio
+    // habría que crear una interface book.modles.ts
+
+    const book: Book = {
+      title: this.bookForm.get('title')?.value ?? 'default', // string
+      numPages: this.bookForm.get('numPages')?.value ?? 0, // number int
+      price: this.bookForm.get('price')?.value ?? 0.0, // number float
+      available: this.bookForm.get('available')?.value ?? false, // boolean
+      publishDate: this.bookForm.get('publishDate')?.value ?? new Date(), // fecha
+      category: this.bookForm.get('category')?.value ?? 'default',
+      topics: this.bookForm.get('topics')?. value ?? [],
+    };
+
+    // una vez creado el objeto book se puede optar por enviar con httpClient o servicio
+
+    
   }
 
 }
