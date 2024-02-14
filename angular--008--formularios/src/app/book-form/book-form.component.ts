@@ -10,7 +10,7 @@ import { Book } from '../interfaces/book.model';
   styleUrl: './book-form.component.css'
 })
 export class BookFormComponent {
-// creas formulario, 2. vas al html del book-form.component 3. haces el metodo
+// 1. creas formulario, 2. vas al html del book-form.component 3. haces el metodo
   bookForm = new FormGroup({
     title: new FormControl(''), // campo título
     numPages: new FormControl(150), // por defecto tiene 150 paginas
@@ -22,7 +22,7 @@ export class BookFormComponent {
     category: new FormControl(),
     author: new FormControl(),
     // selección múltiple
-    topics: new FormControl([]),
+    topics: new FormControl([]), // array
   });
 
   // creamos el metodo save
@@ -68,7 +68,7 @@ export class BookFormComponent {
 
     // una vez creado el objeto book se puede optar por enviar con httpClient o servicio
 
-    
+
   }
 
 }
