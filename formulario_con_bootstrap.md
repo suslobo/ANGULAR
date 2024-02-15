@@ -14,3 +14,5 @@ ng generate component product-form
 
 
 ## crear formulario con bootstrap
+
+https://getbootstrap.com/docs/5.3/forms/form-control/
