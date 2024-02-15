@@ -55,10 +55,10 @@ save(): void {
     manufacturer: this.productForm.get('manufacturer')?.value,
     categories: this.productForm.get('categories')?.value ?? []
   };
-  console.log(product);
-  this.httpClient.post<Product>('http://localhost:3000/products', product).subscribe(data => console.log(data));
-
-  // el objeto se puede enviar a backend
+    // el objeto se puede enviar a backend
   // httpClient.post
+  console.log(product);
+  // CREATE de las operaciones CRUD
+  this.httpClient.post<Product>('http://localhost:3000/products', product).subscribe(data => console.log(data));
 }
 }
