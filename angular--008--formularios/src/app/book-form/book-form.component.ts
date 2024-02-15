@@ -5,6 +5,7 @@ import { Book } from '../interfaces/book.model';
 @Component({
   selector: 'app-book-form',
   standalone: true,
+  // agregar import de formularios
   imports: [ReactiveFormsModule],
   templateUrl: './book-form.component.html',
   styleUrl: './book-form.component.css'

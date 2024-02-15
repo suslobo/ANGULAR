@@ -3,7 +3,7 @@ npm unisstall -g @angular/cli
 ## intalar Angular
 
 npm insttall -g @angular/cli
-O bien instalar la una version concreta: npm install -g @angular/cli@17.1.0
+O bien instalar la una version concreta: npm install -g @angular/cli@17.2.0
 
 hay que comprobar que Angular está instlado
 
