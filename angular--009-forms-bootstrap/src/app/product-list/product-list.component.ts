@@ -13,14 +13,13 @@ import { Product } from '../interfaces/product-moles';
 })
 export class ProductListComponent implements OnInit {
 
-  products: Product [] = [];
-category: any;
+  products: Product[] = [];
 
   constructor(private http: HttpClient) { }
 
+
   ngOnInit(): void {
     this.http.get<Product[]>('http://localhost:3000/products')
-    .subscribe(products => this.products = products);
-  }
+    .subscribe(products => this.products = products);  }
 
 }

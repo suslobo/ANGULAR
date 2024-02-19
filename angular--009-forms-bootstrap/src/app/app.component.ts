@@ -7,8 +7,8 @@ import { ProductFormComponent } from "./product-form/product-form.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [ProductFormComponent, RouterOutlet]
+    imports: [RouterOutlet, ProductFormComponent]
 })
 export class AppComponent {
-  title = 'angular--009-forms-bootstrap';
+  title = 'angular-009-forms-bootstrap';
 }

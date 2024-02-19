@@ -4,24 +4,26 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductFormComponent } from './product-form/product-form.component';
 
 export const routes: Routes = [
-    // listado de productos
-    {
-        path: '',
-        component: ProductListComponent
-    },
-    // la pantalla de detalle de un solo producto
-    {
-        path: 'products/:id/detail',
-        component: ProductDetailComponent
-    },
-    // la pantalla de creacion de un nuevo producto
-    {
-        path: 'products/create',
-        component: ProductFormComponent
-    }, 
-    // la pantalla de actualizar un producto existe
-    {
-        path: 'products/:id/update', // actualizar
-        component: ProductFormComponent
-    }
+  // Listado de productos
+  {
+    path: '',
+    component: ProductListComponent
+  },
+  // La pantalla de detalle de un solo producto
+  {
+    path: 'products/:id/detail',
+    component: ProductDetailComponent
+  },
+  // La pantalla de creación de un nuevo producto
+  {
+    path: 'products/create',
+    component: ProductFormComponent
+  },
+  // La pantalla de actualizar un prod existente
+  {
+    path: 'products/:id/update',
+    component: ProductFormComponent
+  }
 ];
+
+// sudo rm -rf product-list

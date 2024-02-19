@@ -5,9 +5,18 @@
     <div class="col-4 text-center">
 
 
+      <div>
         <!--<p class="py-5">Este restaurante no tiene imagen de perfil.</p>-->
         <img class="img-fluid" src="https://ui-avatars.com/api/?name=A&size=256">
 
+      </div>
+
+      @if(product){
+        <div>
+      <button class="btn btn-primary"
+      [routerLink]="['/products', product.id, 'update']" >Editar producto</button>
+        </div>
+      }
 
     </div>
     <div class="col-8">

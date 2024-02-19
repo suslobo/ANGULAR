@@ -2,8 +2,7 @@
 
 ### OPCIÓN 1: JSON SERVER
 
-npm install - g json-server
-db.json
+npm install - ng json-server db.json
 json-server --watch db.json
 
 si da not found estamos en otra carpeta diferente o el archivo 
