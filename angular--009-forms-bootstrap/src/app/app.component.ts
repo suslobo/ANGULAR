@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { ProductFormComponent } from "./product-form/product-form.component";
 
 @Component({
@@ -6,7 +7,7 @@ import { ProductFormComponent } from "./product-form/product-form.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [ProductFormComponent]
+    imports: [ProductFormComponent, RouterOutlet]
 })
 export class AppComponent {
   title = 'angular--009-forms-bootstrap';
