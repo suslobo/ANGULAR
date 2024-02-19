@@ -2,7 +2,7 @@ import { DatePipe } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Product } from '../interfaces/product-moles';
+import { Product } from '../interfaces/product.model';
 
 @Component({
   selector: 'app-product-list',

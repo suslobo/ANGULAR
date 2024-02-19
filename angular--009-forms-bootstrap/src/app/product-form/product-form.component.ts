@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Manufacturer } from '../interfaces/manufacturer.model';
 import { Category } from '../interfaces/category.model';
-import { Product } from '../interfaces/product-moles';
+import { Product } from '../interfaces/product.model';
 import { tick } from '@angular/core/testing';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
