@@ -30,3 +30,18 @@ ng generate component navbar
     * .png
     * .svg
     * .webp
+
+## CREAR COMPONENTE FOOTER
+
+1. ng generate component footer
+
+2. desde app.component.html mostrar el footer
+
+para poder agregar los iconos:
+npm i bootstrap-icons
+"styles":
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "node_modules/bootstrap-icons/font/bootstrap-icons.min.css",
+    "src/style.css"
+
+## CARGAR TIPOGRAFÍAS PERSONALIZADAS
