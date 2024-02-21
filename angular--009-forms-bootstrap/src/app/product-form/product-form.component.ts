@@ -4,7 +4,7 @@ import { Manufacturer } from '../interfaces/manufacturer.model';
 import { Category } from '../interfaces/category.model';
 import { Product } from '../interfaces/product.model';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-form',
@@ -41,13 +41,14 @@ export class ProductFormComponent implements OnInit {
 
     isUpdate: boolean = false;
 
-    constructor(private httpClient: HttpClient, private activatedRoute: ActivatedRoute) {}
+    constructor(private httpClient: HttpClient, private activatedRoute: ActivatedRoute, private router: Router) {}
 
     ngOnInit(): void {
       this.activatedRoute.params.subscribe(params => {
         let id = params['id'];
         this.httpClient.get<Product>(`http://localhost:3000/products/${id}`).subscribe(product => {
-        this.isUpdate = true;
+
+          this.isUpdate = true;
           // HEMOS OBTENIDO EL PRODUCT por su id
           // RELLENAR CADA CAMPO DEL FORMULARIO CON LOS VALORES DEL PRODUCTO OBTENIDO
           this.productForm.reset({
@@ -63,15 +64,8 @@ export class ProductFormComponent implements OnInit {
       });
     }
 
-    // TODO
-    // capturar id con activated Route
-    // obtener el producto con httpclient get
-    // cargar el producto en el form con el método resetForm
-
-
     save(): void {
       console.log('invocando save');
-
 
       // extraer el valor de cada campo del formulario para crear un objeto Product
       const product: Product = {
@@ -84,15 +78,16 @@ export class ProductFormComponent implements OnInit {
         categories: this.productForm.get('categories')?.value ?? []
       };
       console.log(product);
-      const url = 'http://localhost:3000/products';
 
       if(this.isUpdate){
-            // actualizar producto existente
-
-        this.httpClient.put<Product>(`http//localhost:3000/products/${product.id}`, product).subscribe(data => console.log(data));  
-      } else{
-        // crear un producto nuevo
-        this.httpClient.post<Product>(url, product).subscribe(data => console.log(data));
+        // ACTUALIZAR UN PRODUCTO EXISTENTE
+        const urlForUpdate = 'http://localhost:3000/products/' + product.id;
+        this.httpClient.put<Product>(urlForUpdate, product).subscribe(data => this.router.navigate(['/']));
+      } else {
+        // CREAR UN NUEVO PRODUCTO
+        const url = 'http://localhost:3000/products';
+        this.httpClient.post<Product>(url, product).subscribe(data => this.router.navigate(['/']));
       }
+
     }
 }

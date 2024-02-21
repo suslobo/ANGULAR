@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "1",
-      "title": "prueba producto",
+      "title": "prodcuto 1",
       "price": 4.99,
       "available": true,
       "publishDate": "2024-01-01T10:30",
@@ -11,39 +11,25 @@
         "name": "pepsi",
         "year": 1920
       },
-      "categories": [
-        {
-          "id": 1,
-          "name": "vegan"
-        }
-      ]
-    },
-    {
-      "id": "0",
-      "title": "",
-      "price": 0,
-      "available": false,
-      "publishDate": "2024-02-15T13:04:43.372Z",
-      "manufacturer": null,
-      "categories": [
-        {
-          "id": 2,
-          "name": "Carne"
-        }
-      ]
+      "categories": []
     },
     {
       "id": 0,
-      "title": "producto clase modificado",
-      "price": 50,
+      "title": "producto modificado",
+      "price": 100,
       "available": true,
-      "publishDate": "2024-02-21T10:04:17.076Z",
+      "publishDate": "2024-02-21T11:07:50.502Z",
       "manufacturer": {
-        "id": 2,
-        "name": "Pepsi",
-        "year": 1920
+        "id": 3,
+        "name": "Coca Cola",
+        "year": 1915
       },
-      "categories": []
+      "categories": [
+        {
+          "id": 4,
+          "name": "Vegan"
+        }
+      ]
     }
   ]
 }

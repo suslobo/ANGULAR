@@ -14,3 +14,19 @@
     * si sí tiene id entonces actualizar con http PUT
 
 ## CARGAR CON SELECTORES CON DATOS DEL BACKEND: manufacturer y categories 
+
+TODO
+
+## CREAR COMPONENTE NAVBAR - BARRA DE NAVEGACIÓN
+
+ng generate component navbar
+
+## MOSTRAR IMAGEN/LOGO EN LA NAVBAR
+
+1. crear carpeta img dentro de la carpeta assets
+
+2. colocar un logo o imagen, con extensión
+    * .jpg
+    * .png
+    * .svg
+    * .webp
