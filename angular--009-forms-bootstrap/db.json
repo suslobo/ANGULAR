@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "title": "prueba producto",
       "price": 4.99,
       "available": true,
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "id": 0,
+      "id": "0",
       "title": "",
       "price": 0,
       "available": false,
@@ -31,6 +31,19 @@
           "name": "Carne"
         }
       ]
+    },
+    {
+      "id": 0,
+      "title": "producto clase modificado",
+      "price": 50,
+      "available": true,
+      "publishDate": "2024-02-21T10:04:17.076Z",
+      "manufacturer": {
+        "id": 2,
+        "name": "Pepsi",
+        "year": 1920
+      },
+      "categories": []
     }
   ]
 }

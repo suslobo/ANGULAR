@@ -86,12 +86,13 @@ export class ProductFormComponent implements OnInit {
       console.log(product);
       const url = 'http://localhost:3000/products';
 
+      if(this.isUpdate){
+            // actualizar producto existente
 
-      // TODO comprobar si existe product id
-      // en cuyo caso es un UPDATE --> put
-      // si no es un CREATE --> post
-      // CREATE de las operaciones CRUD
-      this.httpClient.post<Product>(url, product)
-      .subscribe(data => console.log(data));
+        this.httpClient.put<Product>(`http//localhost:3000/products/${product.id}`, product).subscribe(data => console.log(data));  
+      } else{
+        // crear un producto nuevo
+        this.httpClient.post<Product>(url, product).subscribe(data => console.log(data));
+      }
     }
 }
