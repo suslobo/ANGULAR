@@ -19,7 +19,7 @@ export const routes: Routes = [
     path: 'products/create',
     component: ProductFormComponent
   },
-  // La pantalla de actualizar un prod existente
+  // La pantalla de actualizar un producto existente
   {
     path: 'products/:id/update',
     component: ProductFormComponent
