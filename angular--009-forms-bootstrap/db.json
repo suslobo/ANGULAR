@@ -2,34 +2,57 @@
   "products": [
     {
       "id": "1",
-      "title": "prodcuto 1",
-      "price": 4.99,
+      "title": "producto 1 modificado",
+      "price": 50,
       "available": true,
-      "publishDate": "2024-01-01T10:30",
+      "publishDate": "2024-02-21T12:02",
       "manufacturer": {
         "id": 1,
-        "name": "pepsi",
-        "year": 1920
-      },
-      "categories": []
-    },
-    {
-      "id": 0,
-      "title": "producto modificado",
-      "price": 100,
-      "available": true,
-      "publishDate": "2024-02-21T11:07:50.502Z",
-      "manufacturer": {
-        "id": 3,
-        "name": "Coca Cola",
-        "year": 1915
+        "name": "FilaMotor",
+        "year": 2012
       },
       "categories": [
         {
-          "id": 4,
-          "name": "Vegan"
+          "id": 1,
+          "name": "Bebidas"
+        },
+        {
+          "id": 2,
+          "name": "Carne"
         }
       ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "id": 1,
+      "name": "FilaMotor",
+      "year": 2012
+    },
+    {
+      "id": 2,
+      "name": "Ford",
+      "year": 1960
+    },
+    {
+      "id": 3,
+      "name": "Tesla",
+      "year": 2003
+    },
+    {
+      "id": 4,
+      "name": "BMW",
+      "year": 2012
+    },
+    {
+      "id": 5,
+      "name": "Mercedes",
+      "year": 1960
+    },
+    {
+      "id": 6,
+      "name": "Audi",
+      "year": 1950
     }
   ]
 }

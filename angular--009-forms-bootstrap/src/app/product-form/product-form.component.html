@@ -48,7 +48,8 @@
             <select class="form-select"
             id="manufacturer"
             formControlName="manufacturer"
-            aria-label="Fabricante">
+            aria-label="Fabricante"
+            [compareWith]="compareObjetos">
   
               <option selected>Open this select menu</option>
   
@@ -67,7 +68,8 @@
             formControlName="categories"
             aria-label="Categorias"
             multiple
-            style="min-height:160px;">
+            style="min-height:160px;"
+            [compareWith]="compareObjetos">
   
               <option selected>Selecciona categorías</option>
   

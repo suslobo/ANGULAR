@@ -2,11 +2,18 @@ import { Routes } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { ManufacturerListComponent } from './manufacturer-list/manufacturer-list.component';
+import { ManufacturerDetailComponent } from './manufacturer-detail/manufacturer-detail.component';
 
 export const routes: Routes = [
   // Listado de productos
   {
     path: '',
+    redirectTo: '/products-list',
+    pathMatch: 'full'
+  },
+  {
+    path: 'product-list',
     component: ProductListComponent
   },
   // La pantalla de detalle de un solo producto
@@ -19,10 +26,18 @@ export const routes: Routes = [
     path: 'products/create',
     component: ProductFormComponent
   },
-  // La pantalla de actualizar un producto existente
+  // La pantalla de actualizar un prod existente
   {
     path: 'products/:id/update',
     component: ProductFormComponent
+  },
+  {
+    path: 'manufacturers',
+    component: ManufacturerListComponent
+  },
+  {
+    path: 'manufacturers/:id/detail',
+    component: ManufacturerDetailComponent
   }
 ];
 

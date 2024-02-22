@@ -2,7 +2,8 @@
 
 ### OPCIÓN 1: JSON SERVER
 
-npm install -  json-server db.json
+npm install -  
+json-server db.json
 json-server --watch db.json
 
 si da not found estamos en otra carpeta diferente o el archivo 

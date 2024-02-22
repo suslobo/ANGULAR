@@ -90,4 +90,16 @@ export class ProductFormComponent implements OnInit {
       }
 
     }
+
+    // crear una función para comparar objetos en el selector para precargar objetos
+    // esto ayuda a que angular muestre qué manufacturer y categorías tiene asociadas
+    // en los selectores cuando estamos en una ACTUALIZACIÓN DE FORMULARIOS
+    // para esto creamos una función
+    compareObjetos(o1: any, o2: any): boolean {
+      if (o1 && o2) {
+        return o1.id === o2.id;
+      } else {
+        return o1 === o2;
+      }
+    } // esta función se invoca desde el product-form-component.ts (linea 52) compareWith]="compareObjetos"
 }
