@@ -28,5 +28,10 @@
 
 ## ACORDEON (para preguntas y respuestas)
 
+https://ng-bootstrap.github.io/#/components/accordion/examples
+https://ng-bootstrap.github.io/#/components/alert/examples
+
+Selector de fechas:
+https://ng-bootstrap.github.io/#/components/datepicker/examples En el product-form.component.ts
 ## 
 
