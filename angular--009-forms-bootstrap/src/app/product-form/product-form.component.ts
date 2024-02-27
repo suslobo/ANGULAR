@@ -15,19 +15,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductFormComponent implements OnInit {
 
-  // Estos datos se recuperarían de BACKEND
-  // utilizando un SERVICIO o
-  // directamente un httpClient y peticiones GET
-  manufacturers: Manufacturer[] = [
-    { id: 1, name: "FilaMotor", year: 2012},
-    { id: 2, name: "Pepsi", year: 1920},
-    { id: 3, name: "Coca Cola", year: 1915}];
-  categories: Category[] = [
-    { id: 1, name: "Bebidas"},
-    { id: 2, name: "Carne"},
-    { id: 3, name: "Legumbres"},
-    { id: 4, name: "Vegan"}];
-
+    // rellenar estos arrays en ngOnInit con datos del backend
+    manufacturers: Manufacturer[] = [];
+    categories: Category[] = [];
 
     productForm = new FormGroup({
       id: new FormControl(),
@@ -41,9 +31,23 @@ export class ProductFormComponent implements OnInit {
 
     isUpdate: boolean = false;
 
-    constructor(private httpClient: HttpClient, private activatedRoute: ActivatedRoute, private router: Router) {}
+    constructor(
+      private httpClient: HttpClient,
+      private activatedRoute: ActivatedRoute,
+      private router: Router
+      ) {}
 
     ngOnInit(): void {
+      // recuperar los manufacturer del backend dinámicamente
+      const urlMan = 'http://localhost:3000/manufacturers';
+      this.httpClient.get<Manufacturer[]>(urlMan)
+                    .subscribe(manufacturers => this.manufacturers = manufacturers);
+
+      // recuperar categories del backend
+      const urlCat = 'http://localhost:3000/categories';
+      this.httpClient.get<Category[]>(urlCat)
+                    .subscribe(categories => this.categories = categories);
+
       this.activatedRoute.params.subscribe(params => {
         let id = params['id'];
         this.httpClient.get<Product>(`http://localhost:3000/products/${id}`).subscribe(product => {
@@ -60,6 +64,8 @@ export class ProductFormComponent implements OnInit {
             manufacturer: product.manufacturer,
             categories: product.categories
           });
+
+
         });
       });
     }
@@ -91,15 +97,15 @@ export class ProductFormComponent implements OnInit {
 
     }
 
-    // crear una función para comparar objetos en el selector para precargar objetos
+    // Crear una función para comparar objetos en el selector para precargar objetos
     // esto ayuda a que angular muestre qué manufacturer y categorías tiene asociadas
-    // en los selectores cuando estamos en una ACTUALIZACIÓN DE FORMULARIOS
-    // para esto creamos una función
-    compareObjetos(o1: any, o2: any): boolean {
+    // en los selectores cuando estamos en una ACTUALIZACIÓN
+    compareObjects(o1: any, o2: any): boolean {
       if (o1 && o2) {
         return o1.id === o2.id;
       } else {
         return o1 === o2;
       }
-    } // esta función se invoca desde el product-form-component.ts (linea 52) compareWith]="compareObjetos"
+    }
+
 }

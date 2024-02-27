@@ -9,7 +9,7 @@ export const routes: Routes = [
   // Listado de productos
   {
     path: '',
-    redirectTo: '/products-list',
+    redirectTo: '/product-list',
     pathMatch: 'full'
   },
   {
@@ -35,7 +35,7 @@ export const routes: Routes = [
     path: 'manufacturers',
     component: ManufacturerListComponent
   },
-  {
+  { // http://localhost:4200/manufacturers/20/detail
     path: 'manufacturers/:id/detail',
     component: ManufacturerDetailComponent
   }

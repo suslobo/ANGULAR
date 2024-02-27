@@ -27,32 +27,62 @@
     {
       "id": 1,
       "name": "FilaMotor",
-      "year": 2012
+      "year": 2012,
+      "images": [
+        "https://picsum.photos/id/944/900/500",
+        "https://picsum.photos/id/1011/900/500",
+        "https://picsum.photos/id/984/900/500"
+      ]
     },
     {
       "id": 2,
       "name": "Ford",
-      "year": 1960
+      "year": 1960,
+      "images": [
+        "https://picsum.photos/id/944/900/500",
+        "https://picsum.photos/id/1011/900/500",
+        "https://picsum.photos/id/984/900/500"
+      ]
     },
     {
       "id": 3,
       "name": "Tesla",
-      "year": 2003
+      "year": 2003,
+      "images": [
+        "https://picsum.photos/id/944/900/500",
+        "https://picsum.photos/id/1011/900/500",
+        "https://picsum.photos/id/984/900/500"
+      ]
     },
     {
       "id": 4,
       "name": "BMW",
-      "year": 2012
+      "year": 2012,
+      "images": [
+        "https://picsum.photos/id/944/900/500",
+        "https://picsum.photos/id/1011/900/500",
+        "https://picsum.photos/id/984/900/500"
+      ]
     },
     {
       "id": 5,
       "name": "Mercedes",
-      "year": 1960
+      "year": 1960,
+      "images": [
+        "https://picsum.photos/id/944/900/500",
+        "https://picsum.photos/id/1011/900/500",
+        "https://picsum.photos/id/984/900/500"
+      ]
     },
     {
       "id": 6,
       "name": "Audi",
-      "year": 1950
+      "year": 1950,
+      "images": [
+        "https://picsum.photos/id/944/900/500",
+        "https://picsum.photos/id/1011/900/500",
+        "https://picsum.photos/id/984/900/500"
+      ]
     }
   ]
 }
