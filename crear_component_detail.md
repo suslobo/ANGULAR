@@ -29,9 +29,28 @@
 ## ACORDEON (para preguntas y respuestas)
 
 https://ng-bootstrap.github.io/#/components/accordion/examples
+
+
+## ALERTS
 https://ng-bootstrap.github.io/#/components/alert/examples
 
+
+## DATEPICKER PARA FORMULARIOS
 Selector de fechas:
 https://ng-bootstrap.github.io/#/components/datepicker/examples En el product-form.component.ts
-## 
+
+product-form.component.ts y html
+
+Revisar tema de formato de fecha y locale español
+
+## COMPONENTES CATEGORY
+
+* ng generate component category-list
+* ng genarate component category-detail
+* ng generate component category-form
+
+Em category list se puede hacer lo siguiente:
+    1. foto y nombre de categoría
+    2. descripción categoría
+    3. listado de productos filtrado por categoría
 
