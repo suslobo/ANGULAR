@@ -30,7 +30,7 @@ export class LoginComponent {
       password: this.loginForm.get('password')?.value ?? ''
     }
 
-    // enviar por POST a backend con http
+    // 4-enviar por POST a backend con http
     let url = 'http://localhost:3000/login';
     this.httpclient.post<Login>(url, login).subscribe(res => { // la respuesta tendría un token JWT que podríamos guardar en localStorage
       console.log(res); // esto devuelve la autentificación y respuesta

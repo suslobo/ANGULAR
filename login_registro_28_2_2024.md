@@ -12,7 +12,13 @@
 
  ## REGISTRO
 
- ng generate component register
+ 1. ng generate component register
+
+ 2. ruta en app.routes.ts
+ 3. poner un routerLink en la navbar.component.html o cualquier otra pantalla para poder llegar al register
+ 4. crear interfaz register
+ 5. register.component.ts (formulario)
+ 6. register.component.html y css
 
  ## USER LIST
 
