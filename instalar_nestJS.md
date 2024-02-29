@@ -18,7 +18,7 @@ cd .\backend01\
 
 
 
-nest start watch
+nest start watch o npm run start:dev
 
 
 
