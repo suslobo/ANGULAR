@@ -73,6 +73,12 @@
     * utilizar Router para navegar desde TypeScript desde un componente a otro cuando se termnia una acción
     * HTML con directivas @for y @if
 
+8. autenticación y autorización:
+
+    * HTTP Interceptor
+    * Guard
+    * crear un AuthService
+
 ## ESQUEMA BACKEN NESTJS TYPESCRIPT
 
 1. crear un proyecto nestjs
