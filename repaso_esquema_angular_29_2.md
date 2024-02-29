@@ -12,7 +12,7 @@
 
     (En angular.json hay que agregar el bootstrap-icons.min.css a styles:
 
-    "styles": [ "node_modules/bootstrap/dist/css/bootstrap.min.css", "node_modules/bootstrap-icons/font/bootstrap-icons.min.css", "src/styles.css" ],)
+    "styles": [ "node_modules/bootstrap/dist/css/bootstrap.min.css", "node_modules/bootstrap-icons/font/bootstrap-icons.min.css", "src/styles.css"],)
 
 3. creación de componentes del layaout de la web: (lo estático) los proyectos tipicos en todos los proyectos
 
@@ -84,7 +84,7 @@
 
 1. crear un proyecto nestjs
 
-2. configurar conexión a MySQL
+2. configurar conexión a MySQL 
 
 3. crear modelos:
 
