@@ -5,16 +5,16 @@
     
     ng new nombredelproyecto --skip-git --style=css --routing=true --ssr=fals
 
-2. instalar bootstrap y bootstrap icons
+2. instalar bootstrap y bootstrap icons o instalar Angular Material
 
     ng add @ng-bootstrap/ng-bootstrap
     npm i bootstrap-icons
 
-(En angular.json hay que agregar el bootstrap-icons.min.css a styles:
+    (En angular.json hay que agregar el bootstrap-icons.min.css a styles:
 
     "styles": [ "node_modules/bootstrap/dist/css/bootstrap.min.css", "node_modules/bootstrap-icons/font/bootstrap-icons.min.css", "src/styles.css" ],)
 
-3. creación de componentes del layaout de la web: (lo estático)
+3. creación de componentes del layaout de la web: (lo estático) los proyectos tipicos en todos los proyectos
 
     * ng g c navbar
     * ng g c footer
@@ -72,6 +72,7 @@
     * utilizar HttClient para lanzar peticiones al backend
     * utilizar Router para navegar desde TypeScript desde un componente a otro cuando se termnia una acción
     * HTML con directivas @for y @if
+    * utilizar componentes de NgBootstrap y código de los ejemplos de Bootstrap
 
 8. autenticación y autorización:
 
